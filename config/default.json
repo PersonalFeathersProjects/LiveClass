@@ -1,0 +1,61 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 500,
+    "max": 500
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "UEP9L2VOW3psqNqOG5mZ6k9/qkI=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "http://localhost:3000/createschool/",
+      "auth0": {
+        "key": "<auth0 oauth key>",
+        "secret": "<auth0 oauth secret>",
+        "subdomain": "<auth0 subdomain>"
+      },
+      "google": {
+        "key": "439002703401-3be4kn4h8rkmkfilsqh1n1igb4tep6n8.apps.googleusercontent.com",
+        "secret": "xclBjckLZ4kPPHuQNTHrvGj4",
+        "scope": [
+          "email",
+          "profile",
+          "openid"
+        ]
+      },
+      "facebook": {
+        "key": "<facebook oauth key>",
+        "secret": "<facebook oauth secret>"
+      },
+      "twitter": {
+        "key": "<twitter oauth key>",
+        "secret": "<twitter oauth secret>"
+      },
+      "github": {
+        "key": "GITHUB_OAUTH_KEY",
+        "secret": "GITHUB_OAUTH_SECRET"
+      }
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/live_classroom"
+}
