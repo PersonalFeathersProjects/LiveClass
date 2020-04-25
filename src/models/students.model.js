@@ -13,7 +13,7 @@ module.exports = function (app) {
 
     userName: { type: String },
 
-    schoolId: { type: Schema.Types.ObjectId },
+    schoolId: { type: Schema.Types.ObjectId, ref :'users' },
 
     role: { type: String },
 
@@ -21,9 +21,10 @@ module.exports = function (app) {
 
     phone: { type: String },
 
-    schoolAddress: { type: String },
+    schoolAddress: { type: String, ref: 'users'},
 
-    schoolName: { type: String },
+    schoolName: { type: String, ref: 'users' },
+
 
     gradeLevel: { type: String },
 
