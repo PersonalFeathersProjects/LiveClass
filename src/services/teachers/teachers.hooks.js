@@ -1,5 +1,6 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 const nodemailer = require('nodemailer');
+
 const goMail = require('../../SendEmail.Module')
 
 function getUserData(context) {
@@ -10,9 +11,6 @@ function getUserData(context) {
 
   // return Promise.reject()
 }
-
-//creating function for sending emails
-
 
 module.exports = {
   before: {
