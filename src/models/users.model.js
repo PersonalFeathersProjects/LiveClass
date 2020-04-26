@@ -29,7 +29,10 @@ module.exports = function (app) {
 
     schoolLiason: { type: String },
 
-    students: [{ schoolId: { type: mongooseClient.Schema.Types.ObjectId }, name: { type: String }, schoolName: { type: String }, userName: { type: String }, email: { type: String }, phone: { type: String }, gradeLevel: { type: String } }],// this will contain an array of patched data of students belonging to a school for users with the role of "school"
+    gradeLevelId: { type: mongooseClient.Schema.Types.ObjectId, ref: 'gradelevels' },
+
+
+    students: [{ schoolId: { type: mongooseClient.Schema.Types.ObjectId }, name: { type: String }, schoolName: { type: String }, userName: { type: String }, email: { type: String }, phone: { type: String }, gradeLevel: { type: String }, gradeLevelId: { type: mongooseClient.Schema.Types.ObjectId, ref: 'gradelevels' },}],// this will contain an array of patched data of students belonging to a school for users with the role of "school"
 
 
     gradeLevels: [{ schoolId: { type: mongooseClient.Schema.Types.ObjectId }, name: { type: String }, schoolName: { type: String }, estimateStudents: { type: String } }],// this will contain an array of patched data of grade levels or class belonging to a school for users with the role of "school"

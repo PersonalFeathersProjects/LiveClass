@@ -13,7 +13,9 @@ module.exports = function (app) {
 
     userName: { type: String },
 
-    schoolId: { type: Schema.Types.ObjectId, ref :'users' },
+    schoolId: { type: Schema.Types.ObjectId, ref: 'users' },
+    
+    gradeLevelId: { type: Schema.Types.ObjectId, ref :'gradelevels' },
 
     role: { type: String },
 

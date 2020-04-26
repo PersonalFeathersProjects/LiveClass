@@ -11,7 +11,7 @@ module.exports = function (app) {
 
     schoolId: { type: Schema.Types.ObjectId, ref: 'users' },
 
-    estimateStudents: { type: String },
+    estimateTeachers: { type: String },
 
     schoolName: { type: String, ref: 'users' },
 
